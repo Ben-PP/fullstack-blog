@@ -1,6 +1,6 @@
 {
   "name": "fullstack-blog",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Backend for part 4 blog app",
   "main": "index.js",
   "scripts": {
