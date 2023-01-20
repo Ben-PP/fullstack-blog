@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-blog",
+  "version": "4.0.0",
+  "description": "Backend for part 4 blog app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ben-PP/fullstack-blog.git"
+  },
+  "author": "Karel Parkkola",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/Ben-PP/fullstack-blog/issues"
+  },
+  "homepage": "https://github.com/Ben-PP/fullstack-blog#readme",
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4"
+  }
+}
