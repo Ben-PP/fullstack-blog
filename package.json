@@ -1,11 +1,11 @@
 {
   "name": "fullstack-blog",
-  "version": "4.2.0",
+  "version": "4.7.0",
   "description": "Backend for part 4 blog app",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose",
     "dev": "nodemon index.js",
     "lint": "eslint ."
   },
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Ben-PP/fullstack-blog#readme",
   "devDependencies": {
     "eslint": "^8.32.0",
+    "jest": "^29.3.1",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
@@ -28,5 +29,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.8.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
