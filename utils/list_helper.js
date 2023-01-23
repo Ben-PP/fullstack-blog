@@ -31,7 +31,6 @@ const mostBlogs = (blogs) => {
     }
     authors[blog.author] = authors[blog.author] + 1
   })
-  console.log(authors)
   let topDawg = Object.keys(authors)[0]
   Object.keys(authors).forEach((key) => {
     if (authors[key] >= authors[topDawg]) {
@@ -56,7 +55,6 @@ const mostLikes = (blogs) => {
     }
     authors[blog.author] = authors[blog.author] + blog.likes
   })
-  console.log(authors)
   let topDawg = Object.keys(authors)[0]
   Object.keys(authors).forEach((key) => {
     if (authors[key] >= authors[topDawg]) {
