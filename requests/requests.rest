@@ -6,8 +6,19 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-  "title": "Third post",
+  "title": "removed post",
   "author": "Ben",
   "url": "testurl",
   "likes": 0
+}
+
+### Delete blog post
+DELETE http://localhost:3003/api/blogs/63cf9844381a89c024319d37
+
+### Update blog post
+PATCH http://localhost:3003/api/blogs/63ca66bb5a43c58c15294446
+Content-Type: application/json
+
+{
+  "title": ""
 }
