@@ -12,9 +12,17 @@ mongoose.connect(config.MONGODB_URI).then(result => {
 })
 
 const blogSchema = mongoose.Schema({
-  title: String,
+  title: {
+    type: String,
+    minlength: 1,
+    require: true
+  },
   author: String,
-  url: String,
+  url: {
+    type: String,
+    minlength: 1,
+    require: true
+  },
   likes: Number
 })
 blogSchema.set('toJSON', {
