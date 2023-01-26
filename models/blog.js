@@ -17,13 +17,16 @@ const blogSchema = mongoose.Schema({
     minlength: 1,
     require: true
   },
-  author: String,
   url: {
     type: String,
     minlength: 1,
     require: true
   },
-  likes: Number
+  likes: Number,
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 })
 blogSchema.set('toJSON', {
   transform: (document, returnedObject) => {

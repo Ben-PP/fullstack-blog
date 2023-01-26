@@ -6,10 +6,10 @@ POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
-  "title": "removed post",
-  "author": "Ben",
-  "url": "testurl",
-  "likes": 0
+  "title": "new post",
+  "url": "jee",
+  "likes": 0,
+  "userId": "63d1184ee88fc6bed77a5dad"
 }
 
 ### Delete blog post
@@ -22,3 +22,16 @@ Content-Type: application/json
 {
   "title": ""
 }
+
+### Add user
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "testi",
+  "name": "Testi Testaaja",
+  "password": "password"
+}
+
+### Get users
+GET http://localhost:3003/api/users
