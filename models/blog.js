@@ -17,13 +17,18 @@ const blogSchema = mongoose.Schema({
     minlength: 1,
     require: true
   },
+  author: {
+    type: String,
+    minlength: 1,
+    require: true
+  },
   url: {
     type: String,
     minlength: 1,
     require: true
   },
   likes: Number,
-  author: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   }

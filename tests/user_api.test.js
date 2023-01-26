@@ -36,7 +36,7 @@ describe('when there is initially one user at db', () => {
     expect(usernames).toContain(newUser.username)
   })
 
-  test('creation fails with gracefully if username exists', async () => {
+  test('creation fails gracefully if username exists', async () => {
     const usersAtStart = await helper.usersInDb()
 
     const newUser = {
@@ -53,6 +53,42 @@ describe('when there is initially one user at db', () => {
 
     expect(result.body.error).toContain('expected `username` to be unique')
     const usersAtEnd = await helper.usersInDb()
+    expect(usersAtEnd).toHaveLength(usersAtStart.length)
+  })
+
+  test('creation fails if username or password is too short', async () => {
+    const usersAtStart = await helper.usersInDb()
+
+    let newUser = {
+      username: 'be',
+      name: 'benjamin',
+      password: 'salainen'
+    }
+
+    let result = await api
+      .post('/api/users')
+      .send(newUser)
+      .expect(400)
+      .expect('Content-Type', /application\/json/)
+
+    expect(result.body.error).toContain('is shorter than the minimum allowed length (3)')
+    let usersAtEnd = await helper.usersInDb()
+    expect(usersAtEnd).toHaveLength(usersAtStart.length)
+
+    newUser = {
+      username: 'ben',
+      name: 'benjamin',
+      password: 'sa'
+    }
+
+    result = await api
+      .post('/api/users')
+      .send(newUser)
+      .expect(400)
+      .expect('Content-Type', /application\/json/)
+
+    expect(result.body.error).toContain('password is too short')
+    usersAtEnd = await helper.usersInDb()
     expect(usersAtEnd).toHaveLength(usersAtStart.length)
   })
 

@@ -42,7 +42,7 @@ describe('Test the API', () => {
     test('a valid blog can be added ', async () => {
       const newBlog = {
         title: 'a new blog',
-        author: 'Ben',
+        author: 'Ben Author',
         url: '3djake.com',
         likes: 6
       }

@@ -4,12 +4,14 @@ GET http://localhost:3003/api/blogs
 ### Create blog post
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDI1MTJjYTFlYTEzZDg5YmZjNTFmMSIsImlhdCI6MTY3NDczMDc0NH0.pkZkObwnWJ7EbyXRFOTAdf8kHgpvPBWOVNVewdIhve0
 
 {
-  "title": "new post",
+  "title": "second post",
+  "author": "second Author",
   "url": "jee",
   "likes": 0,
-  "userId": "63d1184ee88fc6bed77a5dad"
+  "userId": "63d2512ca1ea13d89bfc51f1"
 }
 
 ### Delete blog post
@@ -28,10 +30,19 @@ POST http://localhost:3003/api/users
 Content-Type: application/json
 
 {
-  "username": "testi",
-  "name": "Testi Testaaja",
-  "password": "password"
+  "username": "be",
+  "name": "Benjamin Testaaja",
+  "password": "ben"
 }
 
 ### Get users
 GET http://localhost:3003/api/users
+
+### Login
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "ben",
+  "password": "ben"
+}
