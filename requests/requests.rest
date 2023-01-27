@@ -4,10 +4,10 @@ GET http://localhost:3003/api/blogs
 ### Create blog post
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDI1MTJjYTFlYTEzZDg5YmZjNTFmMSIsImlhdCI6MTY3NDczMDc0NH0.pkZkObwnWJ7EbyXRFOTAdf8kHgpvPBWOVNVewdIhve0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZDI1MTJjYTFlYTEzZDg5YmZjNTFmMSIsImlhdCI6MTY3NDgwMTMwNn0.YcszKHy77SlGq518exWl_iSDiMBdaIGvHA5a13cd66c
 
 {
-  "title": "second post",
+  "title": "third post",
   "author": "second Author",
   "url": "jee",
   "likes": 0,
