@@ -15,9 +15,9 @@ loginRouter.post('/', async (request, response) => {
       error: 'invalid usernaem or password'
     })
   }
-
+  console.log('user.user: ', user.username)
   const userForToken = {
-    username: user.user,
+    username: user.username,
     id: user._id
   }
 
@@ -25,7 +25,7 @@ loginRouter.post('/', async (request, response) => {
 
   response
     .status(200)
-    .send({ token, usernaem: user.username, name: user.name })
+    .send({ token, username: user.username, name: user.name })
 })
 
 module.exports = loginRouter
